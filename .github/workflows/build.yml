@@ -19,6 +19,8 @@ jobs:
           matrix=$(yaml2json build.yaml | jq -c .)
           yaml2json build.yaml
           echo "::set-output name=matrix::${matrix}"
+
+          
   build:
     runs-on: ubuntu-latest
     container:
